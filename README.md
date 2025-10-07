@@ -25,6 +25,18 @@ All three weight matrices ($W^Q$, $W^K$, $W^V$) are learned during model trainin
 
 # Attention Mechanism Steps
 
+
+📐 Why Use Separate Matrices?
+Each matrix extracts a different aspect of the token’s meaning:
+
+Query asks: “What am I looking for?”
+
+Key answers: “What do I offer?”
+
+Value delivers: “Here’s my actual content.”
+
+By learning these transformations, the model can adaptively decide what information is relevant for each token in context.
+
 1. **Dot Product of Q and K**  
    For each token, compute the dot product between its Query (Q) vector and the Key (K) vectors of all other tokens in the sequence. This operation quantifies the similarity or relevance between tokens, helping the model determine which words are related or should influence each other.
 
